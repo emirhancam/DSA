@@ -22,6 +22,7 @@
   5) Geçerli konum sondan bir önceki elemana ulaşana kadar 2-4 adımlarını tekrarla.
  
 ```cpp
+// CPP
 #include <vector>
 #include <algorithm>
 
@@ -43,6 +44,7 @@ void selectionSort(std::vector<int>& arr) {
 }
 ```
 ```go
+// GO
 package main
 
 func selectionSort(arr []int) {
