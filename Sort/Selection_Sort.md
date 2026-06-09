@@ -42,8 +42,28 @@ void selectionSort(std::vector<int>& arr) {
     }
 }
 ```
+```go
+package main
 
-**Örnek : [29, 10, 14, 37, 13] **   
+func selectionSort(arr []int) {
+	n := len(arr)
+
+	for i := 0; i < n-1; i++ {
+		minIndex := i
+		for j := i + 1; j < n; j++ {
+			if arr[j] < arr[minIndex] {
+				minIndex = j
+			}
+		}
+
+		if minIndex != i {
+			arr[i], arr[minIndex] = arr[minIndex], arr[i]
+		}
+	}
+}
+```
+
+**Örnek :** [29, 10, 14, 37, 13]   
 
 - 1.Geçiş : ` [10, 29, 14, 37, 13] `   --> 29 ve 10 yer değiştirdi.
 - 2.Geçiş : ` [10, 13, 14, 37, 29] `   --> 29 ve 13 yer değiştirdi.
@@ -51,7 +71,20 @@ void selectionSort(std::vector<int>& arr) {
 - 4.Geçiş : ` [10, 13, 14, 29, 37] `   --> 37 ve 29 yer değiştirdi.
 
 
+## Karmaşıklık Analizi
+- **Zaman karmaşıklığı ( O(n^2) )** : Dizi önceden sıralanmış olsa bile, algoritma körü körüne her geçişte en küçük elemanı bulmak için tüm sıralanmamış bölgeyi taramaya devam eder.
+- **Alan Karmaşıklığı ( O(1) )** : Sıralamayı yaparken sadece geçici 1-2 değişken tutar. Ekstra bir dizi veya bellek açmaz.
 
+## Ne Zaman Kullanılmalı ? 
+- Eğer bellek bloklarını taşımak zor ve yavaş ise (örn. devasa obje ve struct'lar), Selection sort tek geçişte max 1 yer değiştirme yaptığı için avantajlıdır.
+- Ekstra hiç bir alana ihtiyaç duymaz. Embedded sistemler için idealdir.
+- Quicksort veya Merge sort gibi gelişmiş algoritmaların prosedür yükünden kaçınmak için basit bir çözümdür.
+
+
+## Ne Zaman Uzak Durulmalı ? 
+- O(n^2) zaman karmaşıklığı sebebiyle 10.000 eleman için bile yaklaşık 50 milyon karşılaşltırma yapar. Büyük dizilerde Merge veya Quick sort tercih edilmeli.
+- Öğrenci notları ve isimleri gibi çoklu kriterlere göre stabil sıralama gereken durumlarda sırayı bozduğu için kullanılmamalıdır. Insertion veya Merge sort kullanılmalı.
+- Dizi zaten neredeyse sıralıysa da, selection sort bu sıradan faydalanmaz. 
 
 
 
