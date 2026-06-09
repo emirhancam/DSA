@@ -9,3 +9,5 @@
   2) Sıralanmamış Bölge (Sağ Taraf)
 
  
+<img width="589" height="100" alt="image" src="https://github.com/user-attachments/assets/c12f6f0d-c721-412f-87c4-9e5c14759fd1" />
+
