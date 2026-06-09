@@ -67,11 +67,11 @@ func insertionSort(arr []int) {
 
 `[7, 3, 5, 1, 9, 2]`
 
-1.Adım : i = 1, key = 3  --> `[3, 7, 5, 1, 9, 2]`
-2.Adım : i = 2, key = 5  --> `[3, 5, 7, 1, 9, 2]`
-3.Adım : i = 3, key = 1  --> `[1, 3, 5, 7, 9, 2]`
-4.Adım : i = 4, key = 9  --> `[1, 3, 5, 7, 9, 2]`
-5.Adım : i = 5, key = 2  --> `[1, 2, 3, 5, 7, 9]`
+1.Adım : i = 1, key = 3  --> `[3, 7, 5, 1, 9, 2]`   
+2.Adım : i = 2, key = 5  --> `[3, 5, 7, 1, 9, 2]`   
+3.Adım : i = 3, key = 1  --> `[1, 3, 5, 7, 9, 2]`   
+4.Adım : i = 4, key = 9  --> `[1, 3, 5, 7, 9, 2]`   
+5.Adım : i = 5, key = 2  --> `[1, 2, 3, 5, 7, 9]`   
 
 ## Hangi Senaryolarda Kullanılmalı ? 
 - Dizi zaten sıralanmaya çok yakınsa, insertion sort çok verimlidir. Adaptive yapısı sayesinde yer değiştirmesi gereken az sayıdaki elemanı sadece birkaç kaydırmayla çözer.
